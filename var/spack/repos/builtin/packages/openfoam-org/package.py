@@ -104,6 +104,7 @@ class OpenfoamOrg(Package):
     assets = ['bin/foamEtcFile']
 
     # Version-specific patches
+    patch('gcc-9.patch', when='%gcc@9:')
     patch('https://github.com/OpenFOAM/OpenFOAM-7/commit/ef33cf38ac9b811072a8970c71fbda35a90f6641.patch',
           sha256='73103e6b1bdbf3b1e0d517cbbd11562e98c6e9464df5f43e5125e9a5b457d1c5', when='@7')
     patch('50-etc.patch', when='@5.0:5.9')
