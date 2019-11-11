@@ -1,0 +1,48 @@
+diff -Naur OpenFOAM-v1906/wmake/rules/linux64Gcc/c OpenFOAM-v1906.patched/wmake/rules/linux64Gcc/c
+--- OpenFOAM-v1906/wmake/rules/linux64Gcc/c	2019-11-07 19:12:53.000000000 +0200
++++ OpenFOAM-v1906.patched/wmake/rules/linux64Gcc/c	2019-11-11 11:46:33.814383282 +0200
+@@ -4,7 +4,7 @@
+ 
+ include $(DEFAULT_RULES)/c$(WM_COMPILE_OPTION)
+ 
+-cFLAGS      = $(cARCH) $(GFLAGS) $(cWARN) $(cOPT) $(cDBUG) $(LIB_HEADER_DIRS) -fPIC
++cFLAGS      = $(cARCH) $(GFLAGS) $(cWARN) -Wno-error=deprecated-copy -Wno-deprecated-copy $(cOPT) $(cDBUG) $(LIB_HEADER_DIRS) -fPIC
+ 
+ ctoo        = $(WM_SCHEDULER) $(cc) $(cFLAGS) -c $< -o $@
+ 
+diff -Naur OpenFOAM-v1906/wmake/rules/linux64Gcc/c++ OpenFOAM-v1906.patched/wmake/rules/linux64Gcc/c++
+--- OpenFOAM-v1906/wmake/rules/linux64Gcc/c++	2019-11-07 19:12:53.000000000 +0200
++++ OpenFOAM-v1906.patched/wmake/rules/linux64Gcc/c++	2019-11-11 11:46:51.918350705 +0200
+@@ -4,7 +4,7 @@
+ 
+ include $(DEFAULT_RULES)/c++$(WM_COMPILE_OPTION)
+ 
+-c++FLAGS    = $(c++ARCH) $(GFLAGS) $(c++WARN) $(c++OPT) $(c++DBUG) $(ptFLAGS) $(LIB_HEADER_DIRS) -fPIC
++c++FLAGS    = $(c++ARCH) $(GFLAGS) $(c++WARN) -Wno-error=deprecated-copy -Wno-deprecated-copy $(c++OPT) $(c++DBUG) $(ptFLAGS) $(LIB_HEADER_DIRS) -fPIC
+ 
+ Ctoo        = $(WM_SCHEDULER) $(CC) $(c++FLAGS) -c $< -o $@
+ cxxtoo      = $(Ctoo)
+diff -Naur OpenFOAM-v1906/wmake/rules/linuxGcc/c OpenFOAM-v1906.patched/wmake/rules/linuxGcc/c
+--- OpenFOAM-v1906/wmake/rules/linuxGcc/c	2019-11-07 19:12:53.000000000 +0200
++++ OpenFOAM-v1906.patched/wmake/rules/linuxGcc/c	2019-11-11 11:46:11.354423569 +0200
+@@ -4,7 +4,7 @@
+ 
+ include $(DEFAULT_RULES)/c$(WM_COMPILE_OPTION)
+ 
+-cFLAGS      = $(cARCH) $(GFLAGS) $(cWARN) $(cOPT) $(cDBUG) $(LIB_HEADER_DIRS) -fPIC
++cFLAGS      = $(cARCH) $(GFLAGS) $(cWARN) -Wno-error=deprecated-copy -Wno-deprecated-copy $(cOPT) $(cDBUG) $(LIB_HEADER_DIRS) -fPIC
+ 
+ ctoo        = $(WM_SCHEDULER) $(cc) $(cFLAGS) -c $< -o $@
+ 
+diff -Naur OpenFOAM-v1906/wmake/rules/linuxGcc/c++ OpenFOAM-v1906.patched/wmake/rules/linuxGcc/c++
+--- OpenFOAM-v1906/wmake/rules/linuxGcc/c++	2019-11-07 19:12:53.000000000 +0200
++++ OpenFOAM-v1906.patched/wmake/rules/linuxGcc/c++	2019-11-11 11:46:23.658401517 +0200
+@@ -4,7 +4,7 @@
+ 
+ include $(DEFAULT_RULES)/c++$(WM_COMPILE_OPTION)
+ 
+-c++FLAGS    = $(c++ARCH) $(GFLAGS) $(c++WARN) $(c++OPT) $(c++DBUG) $(ptFLAGS) $(LIB_HEADER_DIRS) -fPIC
++c++FLAGS    = $(c++ARCH) $(GFLAGS) $(c++WARN) -Wno-error=deprecated-copy -Wno-deprecated-copy $(c++OPT) $(c++DBUG) $(ptFLAGS) $(LIB_HEADER_DIRS) -fPIC
+ 
+ Ctoo        = $(WM_SCHEDULER) $(CC) $(c++FLAGS) -c $< -o $@
+ cxxtoo      = $(Ctoo)

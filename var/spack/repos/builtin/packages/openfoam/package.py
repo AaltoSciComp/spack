@@ -339,6 +339,7 @@ class Openfoam(Package):
     assets = []
 
     # Version-specific patches
+    patch('gcc-9.patch', when='%gcc@9:')
     patch('1612-spack-patches.patch', when='@1612')
     patch('1806-have-kahip.patch', when='@1806')
 
