@@ -15,6 +15,7 @@ class RPrettyunits(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/prettyunits_1.0.2.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/prettyunits"
 
+    version('1.1.1', sha256='9a199aa80c6d5e50fa977bc724d6e39dae1fc597a96413053609156ee7fb75c5')
     version('1.0.2', '0a091a297e8b37df54e7fcf28697ee50')
 
     depends_on('r-magrittr', type=('build', 'run'))

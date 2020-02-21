@@ -14,6 +14,7 @@ class RRoxygen2(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/roxygen2_5.0.1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/roxygen2"
 
+    version('7.0.2', sha256='5823937df68ea558e5e85771b8b6e090775b82f7f797ca5d539e7378c4535d98')
     version('6.1.1', sha256='ed46b7e062e0dfd8de671c7a5f6d120fb2b720982e918dbeb01e6985694c0273')
     version('5.0.1', 'df5bdbc12fda372e427710ef1cd92ed7')
 

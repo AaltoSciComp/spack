@@ -22,6 +22,7 @@ class RJsonlite(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/jsonlite_1.5.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/jsonlite"
 
+    version('1.6.1', sha256='74921dd249857a23afabc1ad1485a63a48828e57f240f0619deb04c60f883377')
     version('1.6', sha256='88c5b425229966b7409145a6cabc72db9ed04f8c37ee95901af0146bb285db53')
     version('1.5', '2a81c261a702fccbbd5d2b32df108f76')
     version('1.2', '80cd2678ae77254be470f5931db71c51')
