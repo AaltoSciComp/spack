@@ -14,6 +14,7 @@ class RPillar(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/pillar_1.3.1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/pillar"
 
+    version('1.4.3', sha256='5a8bc40bd836baab80f70fba268e3f530fb464a9268ad99f1c037380f83f560b')
     version('1.4.2', sha256='bababb76b6db06dc32ccd947dbad6c164a1749ff5b558c6783ad03570f010825')
     version('1.4.1', sha256='f571ca7a3ef0927747510b972da31a26da24b9da68990fe1bbc9d4ae58028c55')
     version('1.3.1', sha256='b338b55f956dd7134f379d39bb94dfb25e13cf27999d6a6e6dc9f292755acbf6')

@@ -16,6 +16,7 @@ class RVctrs(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/vctrs_0.2.0.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/vctrs"
 
+    version('0.2.3', sha256='1c716d100a6c8e7f5aaa025ff4a5bd001b4da72ab71b85070259f31b6eb7d2de')
     version('0.2.0', sha256='5bce8f228182ecaa51230d00ad8a018de9cf2579703e82244e0931fe31f20016')
 
     depends_on('r@3.2:', type=('build', 'run'))
