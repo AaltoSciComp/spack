@@ -38,3 +38,6 @@ class RDevtools(RPackage):
     depends_on('r-roxygen2@6.1.1:', when='@2.0.0:', type=('build', 'run'))
     depends_on('r-sessioninfo@1.1.1:', when='@2.0.0:', type=('build', 'run'))
     depends_on('r-testthat@2.1.1:', when='@2.0.0:', type=('build', 'run'))
+    depends_on('r-covr', when='@2.2.0:', type=('build', 'run'))
+    depends_on('r-dt', when='@2.2.0:', type=('build', 'run'))
+    depends_on('r-rversions', when='@2.2.0:', type=('build', 'run'))
