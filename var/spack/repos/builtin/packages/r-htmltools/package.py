@@ -20,3 +20,4 @@ class RHtmltools(RPackage):
     depends_on('r@2.14.1:', type=('build', 'run'))
     depends_on('r-digest', type=('build', 'run'))
     depends_on('r-rcpp', type=('build', 'run'))
+    depends_on('r-rlang', when='@0.4.0:', type=('build', 'run'))
