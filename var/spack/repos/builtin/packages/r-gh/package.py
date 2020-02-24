@@ -19,3 +19,4 @@ class RGh(RPackage):
     depends_on('r-ini', type=('build', 'run'))
     depends_on('r-jsonlite', type=('build', 'run'))
     depends_on('r-httr', type=('build', 'run'))
+    depends_on('r-cli', when='@1.1.0:', type=('build', 'run'))
