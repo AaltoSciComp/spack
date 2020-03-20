@@ -18,7 +18,7 @@ class Freesurfer(Package):
 
     version('6.0.0', 'd49e9dd61d6467f65b9582bddec653a4')
 
-    depends_on('libpng@1.2.57')
+    depends_on('libpng@1.2.0:1.2.99')
 
     license_required = True
     license_files    = ['license.txt']
