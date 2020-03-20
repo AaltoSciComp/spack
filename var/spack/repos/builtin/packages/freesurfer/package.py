@@ -19,6 +19,8 @@ class Freesurfer(Package):
     version('6.0.0', 'd49e9dd61d6467f65b9582bddec653a4')
 
     depends_on('libpng@1.2.0:1.2.99')
+    depends_on('mesa+opengl')
+    depends_on('libxscrnsaver')
 
     license_required = True
     license_files    = ['license.txt']
@@ -36,3 +38,7 @@ class Freesurfer(Package):
             os.environ['FREESURFER_HOME'] = self.prefix
             run_env.extend(EnvironmentModifications.from_sourcing_file(
                 freesurfer_sh))
+        libs = ['KWWidgets', 'cuda', 'petsc', 'qt', 'tcltktixblt', 'vtk/lib/vtk-5.6']
+        for lib in libs:
+            run_env.prepend_path('LD_LIBRARY_PATH', os.path.join(self.prefix.lib, lib))
+        run_env.prepend_path('LD_LIBRARY_PATH', self.prefix.mni.lib)
