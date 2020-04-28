@@ -18,10 +18,10 @@ class Freesurfer(Package):
 
     version('6.0.0', 'd49e9dd61d6467f65b9582bddec653a4')
 
-    depends_on('libpng@1.2.0:1.2.99')
-    depends_on('mesa+opengl')
-    depends_on('libxscrnsaver')
-    depends_on('gcc')
+    depends_on('libpng@1.2.0:1.2.99', type=('run'))
+    depends_on('mesa+opengl', type=('run'))
+    depends_on('libxscrnsaver', type=('run'))
+    depends_on('gcc', type=('run'))
 
     license_required = True
     license_files    = ['license.txt']
