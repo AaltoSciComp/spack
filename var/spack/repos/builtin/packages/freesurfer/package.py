@@ -21,6 +21,7 @@ class Freesurfer(Package):
     depends_on('libpng@1.2.0:1.2.99')
     depends_on('mesa+opengl')
     depends_on('libxscrnsaver')
+    depends_on('gcc')
 
     license_required = True
     license_files    = ['license.txt']
