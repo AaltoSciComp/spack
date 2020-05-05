@@ -7,6 +7,7 @@ from spack import *
 from spack.environment import EnvironmentModifications
 from distutils.dir_util import copy_tree
 import os
+from glob import glob
 
 
 class Freesurfer(Package):
@@ -42,3 +43,9 @@ class Freesurfer(Package):
         for lib in libs:
             run_env.prepend_path('LD_LIBRARY_PATH', os.path.join(self.prefix.lib, lib))
         run_env.prepend_path('LD_LIBRARY_PATH', self.prefix.mni.lib)
+        if self.spec.satisfies('%gcc'):
+            compiler_path = os.path.dirname(os.path.dirname(self.compiler.cc))
+            libpath = join_path(compiler_path, 'lib', 'gcc')
+            libc_paths = glob(join_path(libpath, 'x86_64*', self.compiler.version))
+            for libc_path in libc_paths:
+                run_env.prepend_path('LD_LIBRARY_PATH', libc_path)
