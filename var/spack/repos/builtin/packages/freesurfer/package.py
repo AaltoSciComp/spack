@@ -47,5 +47,6 @@ class Freesurfer(Package):
             compiler_path = os.path.dirname(os.path.dirname(self.compiler.cc))
             libpath = join_path(compiler_path, 'lib', 'gcc')
             libc_paths = glob(join_path(libpath, 'x86_64*', self.compiler.version))
+            libc_paths.append(join_path(compiler_path, 'lib64'))
             for libc_path in libc_paths:
                 run_env.prepend_path('LD_LIBRARY_PATH', libc_path)
