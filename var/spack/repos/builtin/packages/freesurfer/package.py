@@ -17,7 +17,7 @@ class Freesurfer(Package):
     homepage = "https://surfer.nmr.mgh.harvard.edu/"
     url      = "ftp://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/6.0.0/freesurfer-Linux-centos6_x86_64-stable-pub-v6.0.0.tar.gz"
 
-    version('7.1.0', sha256='689a0daa6e1910e29994d4566d3106d652f553f30acff3fd3145a75d000d87ff')
+    version('7.1.0', sha256='1b8f26fe5c712433ddb74c47fe1895ed1d9fbff46cfae8aaae2697cb65ae8840')
     version('6.0.0', sha256='9e68ee3fbdb80ab73d097b9c8e99f82bf4674397a1e59593f42bb78f1c1ad449')
 
     depends_on('libpng@1.2.0:1.2.99', type=('run'), when='@6.0.0')
@@ -30,7 +30,7 @@ class Freesurfer(Package):
     def url_for_version(self, version):
 
         if version >= Version('7.0.0'):
-            url = "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/{0}/freesurfer-CentOS7-{0}-1.x86_64.rpm"
+            url = "https://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/{0}/freesurfer-linux-centos7_x86_64-{0}.tar.gz"
         else:
             url = "ftp://surfer.nmr.mgh.harvard.edu/pub/dist/freesurfer/{0}/freesurfer-Linux-centos6_x86_64-stable-pub-v{0}.tar.gz"
         return url.format(str(version))
