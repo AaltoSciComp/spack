@@ -81,7 +81,11 @@ class PyGpaw(PythonPackage):
         libs = list(libs.names)
         rpath_str = ':'.join(self.rpath)
 
-        with open('customize.py', 'w') as f:
+        customization_file = 'customize.py'
+        if spec.version >= Version('20.0.0'):
+            customization_file = 'siteconfig.py'
+
+        with open(customization_file, 'w') as f:
             f.write("libraries = {0}\n".format(repr(libs)))
             f.write("include_dirs = {0}\n".format(repr(include_dirs)))
             f.write("library_dirs = {0}\n".format(repr(lib_dirs)))
