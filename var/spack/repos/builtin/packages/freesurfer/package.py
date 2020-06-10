@@ -36,7 +36,10 @@ class Freesurfer(Package):
         return url.format(str(version))
 
     def install(self, spec, prefix):
+        if self.spec.version >= Version('7.0.0'):
+            os.symlink('licence.txt', '.license')
         copy_tree(".", prefix)
+
 
     def setup_environment(self, spack_env, run_env):
         run_env.set('FREESURFER_HOME', self.prefix)
