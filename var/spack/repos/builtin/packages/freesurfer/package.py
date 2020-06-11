@@ -39,7 +39,7 @@ class Freesurfer(Package):
         copy_tree(".", prefix)
         if self.spec.version >= Version('7.0.0'):
             with working_dir(prefix):
-                os.symlink('licence.txt', '.license')
+                os.symlink('license.txt', '.license')
 
 
     def setup_environment(self, spack_env, run_env):
