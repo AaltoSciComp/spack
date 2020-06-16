@@ -15,6 +15,7 @@ class Ffmpeg(AutotoolsPackage):
 
     maintainers = ['xjrc']
 
+    version('4.3', sha256='a7e87112fc49ad5b59e26726e3a7cae0ffae511cba5376c579ba3cb04483d6e2')
     version('4.2.2',  sha256='b620d187c26f76ca19e74210a0336c3b8380b97730df5cdf45f3e69e89000e5c')
     version('4.1.1',  sha256='0cb40e3b8acaccd0ecb38aa863f66f0c6e02406246556c2992f67bf650fab058')
     version('4.1',    sha256='b684fb43244a5c4caae652af9022ed5d85ce15210835bce054a33fb26033a1a5')
@@ -31,6 +32,8 @@ class Ffmpeg(AutotoolsPackage):
     variant('nonfree', default=False,
             description='allow use of nonfree code, the resulting libs '
             'and binaries will be unredistributable')
+    variant('x264', default=False,
+            description='Build with libx264 support')
 
     # NOTE: The libopencv option creates a circular dependency.
     # NOTE: There are more possible variants that would require additional
@@ -66,6 +69,7 @@ class Ffmpeg(AutotoolsPackage):
     depends_on('alsa-lib', when='platform=linux')
     depends_on('libiconv')
     depends_on('yasm@1.2.0:')
+
     depends_on('zlib')
 
     depends_on('aom', when='+libaom')
@@ -79,6 +83,7 @@ class Ffmpeg(AutotoolsPackage):
     depends_on('libwebp', when='+libwebp')
     # TODO: enable libxml2 when libxml2 header issue is resolved
     # depends_on('libxml2', when='+libxml2')
+    depends_on('libx264', when='+x264')
     depends_on('libxv', when='+X')
     depends_on('libzmq', when='+libzmq')
     depends_on('openjpeg', when='+libopenjpeg')
@@ -118,6 +123,7 @@ class Ffmpeg(AutotoolsPackage):
     def enable_or_disable_meta(self, variant, options):
         switch = 'enable' if '+{0}'.format(variant) in self.spec else 'disable'
         return ['--{0}-{1}'.format(switch, option) for option in options]
+
 
     def configure_args(self):
         spec = self.spec
@@ -187,5 +193,8 @@ class Ffmpeg(AutotoolsPackage):
 
         for variant_opt in variant_opts:
             config_args += self.enable_or_disable(variant_opt)
+
+        if '+x264' in spec:
+            config_args += ['--enable-gpl', '--enable-libx264']
 
         return config_args
