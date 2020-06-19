@@ -14,6 +14,7 @@ class RTibble(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/tibble_1.3.4.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/tibble"
 
+    version('3.0.1', sha256='154552cfb767e0bd48ef3fc61df8286ce52205e970815c5bc2560f41eceea79e')
     version('2.1.3', sha256='9a8cea9e6b5d24a7e9bf5f67ab38c40b2b6489eddb0d0edb8a48a21ba3574e1a')
     version('2.0.1', sha256='7ab2cc295eecf00a5310993c99853cd6622ad468e7a60d004b8a73957a713d13')
     version('2.0.0', sha256='05ad2d62e949909548c4bb8ac596810321f11b330afa9717d0889dc35edd99ba')

@@ -16,6 +16,7 @@ class RCallr(RPackage):
     list_url = "https://cloud.r-project.org/src/contrib/Archive/callr/"
 
     version('3.4.3', sha256='01b7277f20c1d662c6bebbfa2798d179922b36d4148b4298853579aeda0382b5')
+    version('3.4.2', sha256='cca155a38474c55906a9eaa58d4ae6fff0facf13926a2ccda0cef3a528b8b42d')
     version('3.3.1', sha256='bf60da47357d3336aa395b0c9643235a621763c80d28bc9bb2257767d0a37967')
     version('3.2.0', sha256='4bb47b1018e8eb5c683a86c05d0d9b8b25848db1f1b30e92cfebedc0ce14b0e8')
     version('3.0.0', sha256='e36361086c65660a6ecbbc09b5ecfcddee6b59caf75e983e48b21d3b8defabe7')

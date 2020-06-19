@@ -13,6 +13,7 @@ class RNlme(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/nlme_3.1-130.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/nlme"
 
+    version('3.1-148', sha256='77c23b644f09723addf16d31a3cb076aca95477418b6242f0c594d81f220aeb2')
     version('3.1-141', sha256='910046260a03d8f776ac7b0766b5adee91556829d0d8a70165b2c695ce038056')
     version('3.1-139', sha256='0460fc69d85122177e7ef01bad665d56bcaf63d31bdbfdbdfdcba2c082085739')
     version('3.1-131', sha256='79daa167eb9bc7d8dba506da4b24b5250665b051d4e0a51dfccbb0087fdb564c')
