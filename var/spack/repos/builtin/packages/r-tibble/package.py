@@ -35,3 +35,5 @@ class RTibble(RPackage):
     depends_on('r-pillar@1.3.1:', type=('build', 'run'), when='@1.4.1:')
     depends_on('r-pkgconfig', type=('build', 'run'), when='@2.0.0:')
     depends_on('r-fansi@0.4.0:', type=('build', 'run'), when='@2.0.0:')
+    depends_on('r-lifecycle@0.2.0:', type=('build', 'run'), when='@3.0.0:')
+    depends_on('r-magrittr', type=('build', 'run'), when='@3.0.0:')
