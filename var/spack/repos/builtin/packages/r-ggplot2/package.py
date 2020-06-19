@@ -39,3 +39,4 @@ class RGgplot2(RPackage):
     depends_on('r-rlang@0.3.0:', when='@3.0.0:', type=('build', 'run'))
     depends_on('r-viridislite', when='@3.0.0:', type=('build', 'run'))
     depends_on('r-withr@2.0.0:', when='@3.0.0:', type=('build', 'run'))
+    depends_on('r-isoband', when='@3.3.0:', type=('build', 'run'))
