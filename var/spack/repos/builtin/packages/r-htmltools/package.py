@@ -22,3 +22,4 @@ class RHtmltools(RPackage):
     depends_on('r-digest', type=('build', 'run'))
     depends_on('r-rcpp', type=('build', 'run'))
     depends_on('r-rlang', when='@0.4.0:', type=('build', 'run'))
+    depends_on('r-base64enc', when='@0.5.0:', type=('build', 'run'))
