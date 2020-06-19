@@ -14,6 +14,7 @@ class RDplyr(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/dplyr_0.7.6.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/dplyr"
 
+    version('1.0.0', sha256='bfb65131cd24d891e671999be29e6dfebb3eefa41c262dbc7a13d7c0ff3db1f3')
     version('0.8.3', sha256='68b4aac65a69ea6390e90991d9c7ce7a011a07e5db439d60cce911a078424c0c')
     version('0.8.2', sha256='e2b6d5b30d04d86f270374623da426541cee8e33ce446fcab6cd7862abf8e18b')
     version('0.7.7', sha256='0553db5a55f0e6f5d2d111e88422c6d26e9d54cb36b860ad2ca28e3826e3d4a4')

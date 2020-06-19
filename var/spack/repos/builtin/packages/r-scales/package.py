@@ -14,6 +14,7 @@ class RScales(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/scales_0.5.0.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/scales"
 
+    version('1.1.1', sha256='40b2b66522f1f314a20fd09426011b0cdc9d16b23ee2e765fe1930292dd03705')
     version('1.0.0', sha256='0c1f4a14edd336a404da34a3cc71a6a9d0ca2040ba19360c41a79f36e06ca30c')
     version('0.5.0', '435f6bd826c5cf8df703ffb8a6750fd1')
     version('0.4.1', '3fb2218866a7fe4c1f6e66790876f85a')

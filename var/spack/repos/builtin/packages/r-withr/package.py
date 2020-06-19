@@ -16,6 +16,7 @@ class RWithr(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/withr_1.0.2.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/withr"
 
+    version('2.2.0', sha256='4c21e51cf48f8c281ddd5f5ec358ac446df3c982104fd00bfe62d9259d73b582')
     version('2.1.2', sha256='41366f777d8adb83d0bdbac1392a1ab118b36217ca648d3bb9db763aa7ff4686')
     version('1.0.2', 'ca52b729af9bbaa14fc8b7bafe38663c')
     version('1.0.1', 'ac38af2c6f74027c9592dd8f0acb7598')

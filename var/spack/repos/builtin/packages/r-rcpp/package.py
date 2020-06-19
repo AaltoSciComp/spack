@@ -21,6 +21,7 @@ class RRcpp(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/Rcpp_0.12.13.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/Rcpp"
 
+    version('1.0.4',   sha256='d992fe8f7480606a0790be94948a6b667f37aa607ccd5e5613e88af861bb00d5')
     version('1.0.3', sha256='2b3500dd3aca16f7b3cb5442625e76dcf4f7c974b4249d33041e9184a5ff030e')
     version('1.0.2', sha256='ad9338d6fc89dd116a3e2c5ecef1956e4be63b6c6aa1b21b2e5f249d65a5129c')
     version('1.0.0',   sha256='b7378bf0dda17ef72aa3f2a318a9cb5667bef50b601dc1096431e17426e18bc2')

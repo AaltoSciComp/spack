@@ -14,6 +14,7 @@ class RHms(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/hms_0.3.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/hms"
 
+    version('0.5.3', sha256='4e2b67c8cf65fe86179f24f42d82b3ca9377d5907837bda98b4fc6c2318853ad')
     version('0.5.0', sha256='a87872665c3bf3901f597d78c152e7805f7129e4dbe27397051de4cf1a76561b')
     version('0.3', '92c4a0cf0c402a35145b5bb57212873e')
 

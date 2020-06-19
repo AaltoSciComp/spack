@@ -15,6 +15,7 @@ class RCli(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/cli_1.0.0.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/cli"
 
+    version('2.0.2', sha256='490834e5b80eb036befa0e150996bcab1c4d5d168c3d45209926e52d0d5413b6')
     version('2.0.1', sha256='bedc6a61c1dd3a789105565ba919da8d3a2b78b238256bab99cd6222e7894874')
     version('1.1.0', sha256='4fc00fcdf4fdbdf9b5792faee8c7cf1ed5c4f45b1221d961332cda82dbe60d0a')
     version('1.0.1', 'ef80fbcde15760fd55abbf9413b306e3971b2a7034ab8c415fb52dc0088c5ee4')

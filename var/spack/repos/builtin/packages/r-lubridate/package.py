@@ -18,6 +18,7 @@ class RLubridate(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/lubridate_1.7.1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/lubridate"
 
+    version('1.7.9', sha256='cbf95ee07323f3912a98f3cfdae04258d7ce1edb259787f284e2be3cddfed272')
     version('1.7.4', sha256='510ca87bd91631c395655ee5029b291e948b33df09e56f6be5839f43e3104891')
     version('1.7.3', sha256='2cffbf54afce1d068e65241fb876a77b10ee907d5a19d2ffa84d5ba8a2c3f3df')
     version('1.7.1', '17dcb4c6a95189941bbdcffecf61b83b')

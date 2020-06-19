@@ -26,6 +26,7 @@ class RBh(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/BH_1.65.0-1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/BH"
 
+    version('1.72.0-3', sha256='888ec1a3316bb69e1ba749b08ba7e0903ebc4742e3a185de8d148c13cddac8ab')
     version('1.69.0-1', sha256='a0fd4364b7e368f09c56dec030823f52c16da0787580af7e4615eddeb99baca2')
     version('1.65.0-1', '7d0402188e4af59f4103f36616d6ee55')
     version('1.60.0-2', 'b50fdc85285da05add4e9da664a2d551')

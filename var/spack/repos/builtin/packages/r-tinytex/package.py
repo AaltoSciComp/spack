@@ -17,6 +17,7 @@ class RTinytex(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/tinytex_0.15.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/tinytex"
 
+    version('0.23', sha256='f52c4575d7c9fbef030666faa1ef63658ddde5c0531f4d69effe8f286a689220')
     version('0.15', sha256='5d0988d3b7f763dfa65c722f177452a21344e428415a4b31aeb51478f0abad90')
 
     depends_on('r-xfun@0.5:', type=('build', 'run'))

@@ -14,6 +14,7 @@ class RModelr(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/modelr_0.1.1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/modelr"
 
+    version('0.1.8', sha256='825ba77d95d60cfb94920bec910872ca2ffe7790a44148b2992be2759cb361c4')
     version('0.1.5', sha256='45bbee387c6ba154f9f8642e9f03ea333cce0863c324ff15d23096f33f85ce5a')
     version('0.1.4', sha256='b4da77c1244bbda512ce323751c8338741eeaa195283f172a0feec2917bcfdd9')
     version('0.1.3', sha256='e536b247c17d6cacf10565dd8a1b744efc90a8815c70edd54371e413e6d1b423')
