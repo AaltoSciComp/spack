@@ -30,3 +30,5 @@ class RScales(RPackage):
     depends_on('r-rcpp', type=('build', 'run'))
     depends_on('r-r6', type=('build', 'run'))
     depends_on('r-viridislite', type=('build', 'run'))
+    depends_on('r-farver@2.0.3:', when='@1.1.0:', type=('build', 'run'))
+    depends_on('r-lifecycle', when='@1.1.0:', type=('build', 'run'))
