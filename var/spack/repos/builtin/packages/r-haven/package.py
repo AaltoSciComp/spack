@@ -27,3 +27,4 @@ class RHaven(RPackage):
     depends_on('r-tibble', type=('build', 'run'))
     depends_on('r-forcats@0.2.0:', type=('build', 'run'))
     depends_on('gmake', type='build')
+    depends_on('r-tidyselect', when='@2.3.1:', type='build')
