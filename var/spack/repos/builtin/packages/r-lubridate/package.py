@@ -27,3 +27,4 @@ class RLubridate(RPackage):
     depends_on('r@3.0.0:', type=('build', 'run'))
     depends_on('r-rcpp@0.12.13:', type=('build', 'run'))
     depends_on('r-stringr', type=('build', 'run'))
+    depends_on('r-generics', when='@1.7.9:', type=('build', 'run'))
