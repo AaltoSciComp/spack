@@ -35,3 +35,4 @@ class RDbplyr(RPackage):
     depends_on('r-rlang@0.2.0:', type=('build', 'run'))
     depends_on('r-tibble@1.4.2:', type=('build', 'run'))
     depends_on('r-tidyselect@0.2.4:', type=('build', 'run'))
+    depends_on('r-blob@1.2.0:', when='@1.4.4:', type=('build', 'run'))
