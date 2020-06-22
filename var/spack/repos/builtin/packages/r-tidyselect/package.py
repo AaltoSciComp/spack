@@ -25,3 +25,5 @@ class RTidyselect(RPackage):
     depends_on('r-purrr', type=('build', 'run'))
     depends_on('r-rlang@0.2.2:', type=('build', 'run'))
     depends_on('r-rcpp@0.12.0:', type=('build', 'run'))
+    depends_on('r-ellipsis', when='@1.1.0:', type=('build', 'run'))
+    depends_on('r-vctrs@0.2.2:', when='@1.1.0:', type=('build', 'run'))
