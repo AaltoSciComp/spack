@@ -41,3 +41,4 @@ class RDplyr(RPackage):
     depends_on('r-tidyselect@0.2.5:', type=('build', 'run'))
     depends_on('r-bh', type=('build', 'run'))
     depends_on('r-plogr@0.2.0:', when='@0.7.0:', type=('build', 'run'))
+    depends_on('r-generics', when='@1.0.0:', type=('build', 'run'))
