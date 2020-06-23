@@ -50,7 +50,7 @@ class Cp2k(MakefilePackage, CudaPackage):
     variant('cuda_arch',
             description='CUDA architecture',
             default='none',
-            values=('none', '35', '37', '60'),
+            values=('none', '35', '37', '60', '70'),
             multi=False)
     variant('cuda_arch_35_k20x', default=False,
             description=('CP2K (resp. DBCSR) has specific parameter sets for'
