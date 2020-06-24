@@ -368,6 +368,7 @@ class Cp2k(MakefilePackage, CudaPackage):
                     '35': 'K40',
                     '37': 'K80',
                     '60': 'P100',
+                    '70': 'V100',
                 }[cuda_arch]
 
                 if (cuda_arch == '35'
