@@ -14,12 +14,13 @@ class RTriton(Package):
 
     version('1.0.0', sha256='56094654d3380f9b6522a9de7eb9edca9ad1743c63fa69982fe0b20a2a492cd3')
 
-    depends_on('r-irkernel')
-    depends_on('r-tidyverse')
-    depends_on('r-feather')
-    depends_on('r-ggplot2movies')
-    depends_on('r-microbenchmark')
-    depends_on('r-pryr')
+    depends_on('gcc', type='run')
+    depends_on('r-irkernel', type='run')
+    depends_on('r-tidyverse', type='run')
+    depends_on('r-feather', type='run')
+    depends_on('r-ggplot2movies', type='run')
+    depends_on('r-microbenchmark', type='run')
+    depends_on('r-pryr', type='run')
 
     def install(self, spec, prefix):
         copy_tree(".", prefix)
