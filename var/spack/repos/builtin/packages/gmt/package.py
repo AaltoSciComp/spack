@@ -17,6 +17,7 @@ class Gmt(Package):
     homepage = "http://gmt.soest.hawaii.edu/"
     url      = "https://github.com/GenericMappingTools/gmt/archive/5.4.4.tar.gz"
 
+    version('6.1.0', sha256='5cc6c38848079b9df3c94ecb53a5d2a4a685775f51e7a884aa5807b7f6fdfd6f')
     version('5.4.4', sha256='b593dfb101e6507c467619f3d2190a9f78b09d49fe2c27799750b8c4c0cd2da0')
     version('4.5.9', sha256='9b13be96ccf4bbd38c14359c05dfa7eeeb4b5f06d6f4be9c33d6c3ea276afc86',
             url='ftp://ftp.soest.hawaii.edu/gmt/legacy/gmt-4.5.9.tar.bz2')
