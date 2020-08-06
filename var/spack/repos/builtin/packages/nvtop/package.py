@@ -21,10 +21,14 @@ class Nvtop(CMakePackage):
 
     def patch(self):
         filter_file(
-            r'\$\{nvml_lib_path_hint\}',
+            r'\$\{nvml_header_path_hint\}',
             self.spec['cuda'].prefix.include,
             'cmake/modules/FindNVML.cmake')
         filter_file(
-            r'\$\{nvml_header_path_hint\}',
-            self.spec['cuda'].prefix.lib64,
+            r'\$\{nvml_lib_path_hint\}',
+            self.spec['cuda'].prefix.lib64.stubs,
+            'cmake/modules/FindNVML.cmake')
+        filter_file(
+            r'libnvidia-ml.so.1',
+            r'libnvidia-ml.so',
             'cmake/modules/FindNVML.cmake')
