@@ -19,13 +19,12 @@ class Nvtop(CMakePackage):
     depends_on('ncurses', type=('build','run'))
     depends_on('cuda', type=('build','run'))
 
-    def cmake_args(self):
-        spec = self.spec
-
-        options = []
-
-        options.extend([
-            '-DNVML_INCLUDE_DIRS=%s' % spec['cuda'].prefix.include,
-            '-DNVML_LIBRARIES=%s' % spec['cuda'].prefix.lib64
-        ])
-        return options
+    def patch(self):
+        filter_file(
+            r'\$\{nvml_lib_path_hint\}',
+            self.spec['cuda'].prefix.include,
+            'cmake/modules/FindNVML.cmake')
+        filter_file(
+            r'\$\{nvml_header_path_hint\}',
+            self.spec['cuda'].prefix.lib64,
+            'cmake/modules/FindNVML.cmake')
