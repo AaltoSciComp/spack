@@ -35,6 +35,7 @@ class Go(Package):
 
     extendable = True
 
+    version('1.14.7', sha256='064392433563660c73186991c0a315787688e7c38a561e26647686f89b6c30e3')
     version('1.13', sha256='3fc0b8b6101d42efd7da1da3029c0a13f22079c0c37ef9730209d8ec665bf122')
     version('1.12.9', sha256='ab0e56ed9c4732a653ed22e232652709afbf573e710f56a07f7fdeca578d62fc')
     version('1.12.8', sha256='11ad2e2e31ff63fcf8a2bdffbe9bfa2e1845653358daed593c8c2d03453c9898')
