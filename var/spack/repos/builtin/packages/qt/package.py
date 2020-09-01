@@ -149,6 +149,7 @@ class Qt(Package):
     depends_on("pcre2+multibyte", when='@5.9:')
 
     depends_on("libxcomposite", when='@5.12:')
+    depends_on("snappy", when='@5.12:')
 
     # Non-macOS dependencies and special macOS constraints
     if MACOS_VERSION is None:
