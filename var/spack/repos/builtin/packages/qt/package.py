@@ -164,6 +164,7 @@ class Qt(Package):
     conflicts('%gcc@:4.99', when='@5.14:')
 
     depends_on("libxcomposite", when='@5.12:')
+    depends_on("snappy", when='@5.12:')
 
     # Non-macOS dependencies and special macOS constraints
     if MACOS_VERSION is None:
