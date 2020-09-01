@@ -148,6 +148,8 @@ class Qt(Package):
     depends_on("double-conversion", when='@5.7:')
     depends_on("pcre2+multibyte", when='@5.9:')
 
+    depends_on("libxcomposite", when='@5.12:')
+
     # Non-macOS dependencies and special macOS constraints
     if MACOS_VERSION is None:
         depends_on("fontconfig", when='freetype=spack')
