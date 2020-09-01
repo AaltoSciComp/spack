@@ -165,7 +165,7 @@ class Qt(Package):
 
     depends_on("libxcomposite", when='@5.12:')
     depends_on("snappy", when='@5.12:')
-    depends_on("re2c", when='@5.12:')
+    depends_on("re2", when='@5.12:')
 
     # Non-macOS dependencies and special macOS constraints
     if MACOS_VERSION is None:
