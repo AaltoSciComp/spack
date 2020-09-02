@@ -152,6 +152,7 @@ class Qt(Package):
     depends_on("snappy", when='@5.12:')
     depends_on("re2", when='@5.12:')
     depends_on("alsa-lib", when='@5.12:')
+    depends_on("protobuf", when='@5.12:')
 
     # Non-macOS dependencies and special macOS constraints
     if MACOS_VERSION is None:
@@ -358,6 +359,8 @@ class Qt(Package):
 
         if '@:5.7.1' in self.spec:
             config_args.append('-no-openvg')
+        elif '@5.12.0:' in self.spec:
+            pass
         else:
             # FIXME: those could work for other versions
             config_args.extend([
