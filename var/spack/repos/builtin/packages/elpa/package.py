@@ -29,6 +29,8 @@ class Elpa(AutotoolsPackage, CudaPackage):
 
     variant('openmp', default=False, description='Activates OpenMP support')
     variant('optflags', default=True, description='Build with optimization flags')
+    variant('avx', default=True, description='Build with avx kernels')
+    variant('avx2', default=True, description='Build with avx2 kernels')
 
     depends_on('mpi')
     depends_on('blas')
