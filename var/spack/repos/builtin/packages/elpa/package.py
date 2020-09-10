@@ -29,6 +29,8 @@ class Elpa(AutotoolsPackage):
 
     variant('openmp', default=False, description='Activates OpenMP support')
     variant('optflags', default=True, description='Build with optimization flags')
+    variant('avx', default=True, description='Build with avx kernels')
+    variant('avx2', default=True, description='Build with avx2 kernels')
 
     depends_on('mpi')
     depends_on('blas')
@@ -84,6 +86,10 @@ class Elpa(AutotoolsPackage):
         # without -march=native there is configure error for 2017.05.02
         # Could not compile test program, try with --disable-sse, or
         # adjust the C compiler or CFLAGS
+        if '~avx' in self.spec:
+            options.append('--disable-avx')
+        if '~avx2' in self.spec:
+            options.append('--disable-avx2')
         if '+optflags' in self.spec:
             options.extend([
                 'FCFLAGS=-O2 -ffree-line-length-none',
