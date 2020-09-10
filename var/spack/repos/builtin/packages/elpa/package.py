@@ -14,6 +14,8 @@ class Elpa(AutotoolsPackage):
     homepage = 'http://elpa.mpcdf.mpg.de/'
     url = 'http://elpa.mpcdf.mpg.de/elpa-2015.11.001.tar.gz'
 
+    version('2020.05.001',
+            sha256='66ff1cf332ce1c82075dc7b5587ae72511d2bcb3a45322c94af6b01996439ce5')
     version('2018.11.001',
             sha256='cc27fe8ba46ce6e6faa8aea02c8c9983052f8e73a00cfea38abf7613cb1e1b16')
     version('2018.05.001.rc1', 'ccd77bd8036988ee624f43c04992bcdd')
