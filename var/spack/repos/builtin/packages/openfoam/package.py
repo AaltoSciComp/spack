@@ -355,6 +355,7 @@ class Openfoam(Package):
           when='@1806',
           sha256='531146be868dd0cda70c1cf12a22110a38a30fd93b5ada6234be3d6c9256c6cf'
           )
+    patch('1906-gcc-9.patch', when='@1906 %gcc@9:')
 
     # Some user config settings
     # default: 'compile-option': '-spack',

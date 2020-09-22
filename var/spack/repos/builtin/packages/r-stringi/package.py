@@ -21,6 +21,7 @@ class RStringi(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/stringi_1.1.2.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/stringi"
 
+    version('1.4.6', sha256='633f67da5bd7bcb611764e4f478b0da050d22a715bbcbdd67aed0300dcef6fd6')
     version('1.4.3', sha256='13cecb396b700f81af38746e97b550a1d9fda377ca70c78f6cdfc770d33379ed')
     version('1.3.1', sha256='32df663bb6e9527e1ac265eec2116d26f7b7e62ea5ae7cc5de217cbb8defc362')
     version('1.1.5', sha256='651e85fc4ec6cf71ad8a4347f2bd4b00a490cf9eec20921a83bf5222740402f2')

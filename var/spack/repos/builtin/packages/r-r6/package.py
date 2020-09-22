@@ -18,6 +18,7 @@ class RR6(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/R6_2.2.2.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/R6"
 
+    version('2.4.1', sha256='26b0fd64827655c28c903f7ff623e839447387f3ad9b04939a02f41ac82faa3e')
     version('2.4.0', sha256='70be110174fbf5f5304049b186a6f9c05b77bfaec6d8caf980fcef5da6e0abce')
     version('2.2.2', sha256='087756f471884c3b3ead80215a7cc5636a78b8a956e91675acfe2896426eae8f')
     version('2.2.0', sha256='7d7bddc4303fafa99954182ccad938166d681499d4e9ae7001d21b0fd60d25c7')

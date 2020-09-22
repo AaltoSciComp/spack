@@ -14,6 +14,7 @@ class PyGpaw(PythonPackage):
     homepage = "https://wiki.fysik.dtu.dk/gpaw/index.html"
     url      = "https://pypi.io/packages/source/g/gpaw/gpaw-1.3.0.tar.gz"
 
+    version('20.1.0', sha256='c84307eb9943852d78d966c0c8856fcefdefa68621139906909908fb641b8421')
     version('19.8.1', sha256='79dee367d695d68409c4d69edcbad5c8679137d6715da403f6c2500cb2178c2a')
     version('1.3.0', sha256='cf601c69ac496421e36111682bcc1d23da2dba2aabc96be51accf73dea30655c')
 
@@ -27,7 +28,7 @@ class PyGpaw(PythonPackage):
     depends_on('python@2.6:', type=('build', 'run'), when='@:1.3.0')
     depends_on('python@3.5:', type=('build', 'run'), when='@19.8.1:')
     depends_on('py-ase@3.13.0:', type=('build', 'run'), when='@1.3.0')
-    depends_on('py-ase@3.18.0:', type=('build', 'run'), when='@19.8.1')
+    depends_on('py-ase@3.18.0:', type=('build', 'run'), when='@19.8.1:')
     depends_on('py-numpy +blas +lapack', type=('build', 'run'))
     depends_on('py-scipy', type=('build', 'run'))
     depends_on('libxc')
@@ -85,7 +86,11 @@ class PyGpaw(PythonPackage):
         libs = list(libs.names)
         rpath_str = ':'.join(self.rpath)
 
-        with open('customize.py', 'w') as f:
+        customization_file = 'customize.py'
+        if spec.version >= Version('20.0.0'):
+            customization_file = 'siteconfig.py'
+
+        with open(customization_file, 'w') as f:
             f.write("libraries = {0}\n".format(repr(libs)))
             f.write("include_dirs = {0}\n".format(repr(include_dirs)))
             f.write("library_dirs = {0}\n".format(repr(lib_dirs)))

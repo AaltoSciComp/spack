@@ -15,6 +15,7 @@ class RTidyselect(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/tidyselect_0.2.3.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/tidyselect"
 
+    version('1.1.0', sha256='e635ed381fb53f7a53c3fa36bb33e134a3273d272367de2a8d909c821be93893')
     version('0.2.5', sha256='5ce2e86230fa35cfc09aa71dcdd6e05e1554a5739c863ca354d241bfccb86c74')
     version('0.2.4', sha256='5cb30e56ad5c1ac59786969edc8d542a7a1735a129a474f585a141aefe6a2295')
     version('0.2.3', sha256='0c193abc8251a60e1d2a32a99c77651c336bc185e3c2a72e5f8781813d181c2c')
@@ -24,3 +25,5 @@ class RTidyselect(RPackage):
     depends_on('r-purrr', type=('build', 'run'))
     depends_on('r-rlang@0.2.2:', type=('build', 'run'))
     depends_on('r-rcpp@0.12.0:', type=('build', 'run'))
+    depends_on('r-ellipsis', when='@1.1.0:', type=('build', 'run'))
+    depends_on('r-vctrs@0.2.2:', when='@1.1.0:', type=('build', 'run'))

@@ -14,6 +14,8 @@ class PyAse(PythonPackage):
     homepage = "https://wiki.fysik.dtu.dk/ase/"
     url      = "https://pypi.io/packages/source/a/ase/ase-3.13.0.tar.gz"
 
+    version('3.19.0',
+            sha256='a8378ab57e91cfe1ba09b3639d8409bb7fc1a40b59479c7822d206e673ad93f9')
     version('3.18.0',
             sha256='39d45f12def2669605bffc82926acfb13a0d0610e6d82740fa316aafa70f97f9')
     version('3.15.0', sha256='5e22d961b1311ef4ba2d83527f7cc7448abac8cf9bddd1593bee548459263fe8')

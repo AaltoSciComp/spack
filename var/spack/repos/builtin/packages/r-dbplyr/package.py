@@ -17,6 +17,7 @@ class RDbplyr(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/dbplyr_1.1.0.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/dbplyr"
 
+    version('1.4.4', sha256='a80179ab033fa0b7d6e0049ebf6168ad0230050a84c9842d417f197b4a0117ec')
     version('1.4.2', sha256='b783f0da2c09a1e63f41168b02c0715b08820f02a351f7ab0aaa688432754de0')
     version('1.4.1', sha256='cfe829f56acdc785c5af21bf3927cf08327504d78c4ae1477c405c81b131da95')
     version('1.2.2', sha256='9d410bb0055fffe10f1f8da55a5b24d98322c7b571d74df61427d5888332bc48')
@@ -34,3 +35,4 @@ class RDbplyr(RPackage):
     depends_on('r-rlang@0.2.0:', type=('build', 'run'))
     depends_on('r-tibble@1.4.2:', type=('build', 'run'))
     depends_on('r-tidyselect@0.2.4:', type=('build', 'run'))
+    depends_on('r-blob@1.2.0:', when='@1.4.4:', type=('build', 'run'))

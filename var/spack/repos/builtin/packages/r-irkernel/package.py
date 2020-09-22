@@ -14,6 +14,7 @@ class RIrkernel(RPackage):
     git      = "https://github.com/IRkernel/IRkernel.git"
 
     version('master', tag='0.7')
+    version('1.1', tag='1.1')
 
     depends_on('r-repr', type=('build', 'run'))
     depends_on('r-irdisplay', type=('build', 'run'))

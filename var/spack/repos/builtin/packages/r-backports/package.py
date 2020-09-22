@@ -19,6 +19,8 @@ class RBackports(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/backports_1.1.1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/backports"
 
+    version('1.1.8', sha256='c661b271433338274c4140caf7cf8254f13f1b8870ace0e7e4917238044b2cc7')
+    version('1.1.5', sha256='63ec38adf383b70b4cd2b661ad353afacff9c4388353578bf4302ab190e1294c')
     version('1.1.4', sha256='ee4b5efef22fa7ef27d7983ffcd31db52f81e1fbb7189c6e89ee09b69349ff03')
     version('1.1.3', sha256='e41bd146824ec921994f1b176d0e4cca0b36dd3db32ca7a954d872a5ba214cc1')
     version('1.1.1', sha256='494e81a4829339c8f1cc3e015daa807e9138b8e21b929965fc7c00b1abbe8897')

@@ -1,0 +1,48 @@
+diff -Naur OpenFOAM-6-version-6/wmake/rules/linux64Gcc/c OpenFOAM-6-version-6.patched/wmake/rules/linux64Gcc/c
+--- OpenFOAM-6-version-6/wmake/rules/linux64Gcc/c	2018-07-09 19:01:02.000000000 +0300
++++ OpenFOAM-6-version-6.patched/wmake/rules/linux64Gcc/c	2019-11-05 15:24:44.043296221 +0200
+@@ -1,6 +1,6 @@
+ SUFFIXES += .c
+ 
+-cWARN        = -Wall
++cWARN        = -Wall -Wno-error=deprecated-copy -Wno-deprecated-copy
+ 
+ cc          = gcc -m64
+ 
+diff -Naur OpenFOAM-6-version-6/wmake/rules/linux64Gcc/c++ OpenFOAM-6-version-6.patched/wmake/rules/linux64Gcc/c++
+--- OpenFOAM-6-version-6/wmake/rules/linux64Gcc/c++	2018-07-09 19:01:02.000000000 +0300
++++ OpenFOAM-6-version-6.patched/wmake/rules/linux64Gcc/c++	2019-11-05 15:24:56.379271790 +0200
+@@ -1,7 +1,8 @@
+ SUFFIXES += .C
+ 
+ c++WARN     = -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter \
+-              -Wno-invalid-offsetof -Wno-attributes
++              -Wno-invalid-offsetof -Wno-attributes -Wno-error=deprecated-copy \
++              -Wno-deprecated-copy
+ 
+ # Suppress some warnings for flex++ and CGAL
+ c++LESSWARN = -Wno-old-style-cast -Wno-unused-local-typedefs -Wno-array-bounds
+diff -Naur OpenFOAM-6-version-6/wmake/rules/linuxGcc/c OpenFOAM-6-version-6.patched/wmake/rules/linuxGcc/c
+--- OpenFOAM-6-version-6/wmake/rules/linuxGcc/c	2018-07-09 19:01:02.000000000 +0300
++++ OpenFOAM-6-version-6.patched/wmake/rules/linuxGcc/c	2019-11-05 15:24:58.919266760 +0200
+@@ -1,6 +1,6 @@
+ SUFFIXES += .c
+ 
+-cWARN        = -Wall
++cWARN        = -Wall -Wno-error=deprecated-copy -Wno-deprecated-copy
+ 
+ cc          = gcc -m32
+ 
+diff -Naur OpenFOAM-6-version-6/wmake/rules/linuxGcc/c++ OpenFOAM-6-version-6.patched/wmake/rules/linuxGcc/c++
+--- OpenFOAM-6-version-6/wmake/rules/linuxGcc/c++	2018-07-09 19:01:02.000000000 +0300
++++ OpenFOAM-6-version-6.patched/wmake/rules/linuxGcc/c++	2019-11-05 15:24:33.739316630 +0200
+@@ -1,7 +1,8 @@
+ SUFFIXES += .C
+ 
+ c++WARN     = -Wall -Wextra -Wold-style-cast -Wnon-virtual-dtor -Wno-unused-parameter \
+-              -Wno-invalid-offsetof -Wno-attributes
++              -Wno-invalid-offsetof -Wno-attributes -Wno-error=deprecated-copy \
++              -Wno-deprecated-copy
+ 
+ # Suppress some warnings for flex++ and CGAL
+ c++LESSWARN = -Wno-old-style-cast -Wno-unused-local-typedefs -Wno-array-bounds

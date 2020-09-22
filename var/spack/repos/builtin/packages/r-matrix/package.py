@@ -14,6 +14,7 @@ class RMatrix(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/Matrix_1.2-14.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/Matrix"
 
+    version('1.2-18', sha256='f7ff018c2811946767ffd4c96d3987e859b82786ff72e1c211ab18bc03cb6119')
     version('1.2-17', sha256='db43e6f0196fd5dfd05a7e88cac193877352c60d771d4ec8772763e645723fcc')
     version('1.2-14', sha256='49a6403547b66675cb44c1afb04bb87130c054510cb2b94971435a826ab41396')
     version('1.2-11', sha256='ba8cd6565612552fe397e909721817b6cc0604a91299d56d118208006888dc0b')

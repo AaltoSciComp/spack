@@ -14,6 +14,7 @@ class RFs(RPackage):
     url      = "https://cloud.r-project.org/src/contrib/fs_1.3.1.tar.gz"
     list_url = "https://cloud.r-project.org/src/contrib/Archive/fs"
 
+    version('1.4.1', sha256='ae9103dff26ca56a34901408bd650a2949f491b2a0886c686a51a179d38b7a4e')
     version('1.3.1', sha256='d6934dca8f835d8173e3fb9fd4d5e2740c8c04348dd2bcc57df1b711facb46bc')
 
     depends_on('r@3.1:', type=('build', 'run'))
