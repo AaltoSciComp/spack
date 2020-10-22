@@ -275,11 +275,13 @@ class QuantumEspresso(Package):
             options.append(
                 'FFTW_INCLUDE={0}'.format(join_path(env['MKLROOT'],
                                                     'include/fftw')))
+        make_opts = []
         if '^fftw@3:' in spec:
             fftw_prefix = spec['fftw'].prefix
             options.append('FFTW_INCLUDE={0}'.format(fftw_prefix.include))
             fftw_ld_flags = spec['fftw'].libs.ld_flags
             options.append('FFT_LIBS={0}'.format(fftw_ld_flags))
+            make_opts.append('MANUAL_DFLAGS=-D__FFTW3')
 
         # External BLAS and LAPACK requires the correct link line into
         # BLAS_LIBS, do no use LAPACK_LIBS as the autoconf scripts indicate
@@ -358,9 +360,9 @@ class QuantumEspresso(Package):
                 )
 
         if '+epw' in spec:
-            make('all', 'epw')
+            make('all', 'epw', *make_opts)
         else:
-            make('all')
+            make('all', *make_opts)
 
         if 'platform=darwin' in spec:
             mkdirp(prefix.bin)
