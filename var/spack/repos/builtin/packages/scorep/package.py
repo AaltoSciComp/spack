@@ -70,6 +70,7 @@ class Scorep(AutotoolsPackage):
 
     depends_on('llvm', when="+unwind")
     depends_on('libunwind', when="+unwind")
+    depends_on('cuda', when="+cuda")
 
     depends_on('cuda', when="+cuda")
 
