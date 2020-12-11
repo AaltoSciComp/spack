@@ -21,16 +21,6 @@ class Libxc(AutotoolsPackage):
 
     patch('configure_add_fj.patch')
 
-    def url_for_version(self, version):
-        if version < Version('3.0.0'):
-            return ("http://www.tddft.org/programs/octopus/"
-                    "down.php?file=libxc/libxc-{0}.tar.gz"
-                    .format(version))
-
-        return ("http://www.tddft.org/programs/octopus/"
-                "down.php?file=libxc/{0}/libxc-{0}.tar.gz"
-                .format(version))
-
     @property
     def libs(self):
         """Libxc can be queried for the following parameters:
