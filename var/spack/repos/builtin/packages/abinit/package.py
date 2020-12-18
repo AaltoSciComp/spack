@@ -173,6 +173,11 @@ class Abinit(AutotoolsPackage):
             # dependencies, such as netcdf3 in this case.
             oapp('--with-trio-flavor=none')
 
+        # Adding Spack compiler flags
+        options.append('--enable-optim')
+        options.append('CFLAGS_OPTIM=-O2 {0}'.format(env['SPACK_TARGET_ARGS']))
+        options.append('CXXFLAGS_OPTIM=-O2 {0}'.format(env['SPACK_TARGET_ARGS']))
+
         return options
 
     def check(self):
