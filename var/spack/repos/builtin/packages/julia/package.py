@@ -40,6 +40,7 @@ class Julia(Package):
 
     variant('cxx', default=False, description='Prepare for Julia Cxx package')
     variant('mkl', default=False, description='Use Intel MKL')
+    variant('blas', default=False, description='Compile against Spack BLAS')
 
     patch('gc.patch', when='@0.4:0.4.5')
     patch('openblas.patch', when='@0.4:0.4.5')
@@ -63,6 +64,10 @@ class Julia(Package):
     depends_on('git', type=('build', 'run'), when='@:0.4')
     depends_on('openssl@:1.0', when='@:0.5.0')
     depends_on('mkl', when='+mkl')
+    depends_on('blas', when='+blas')
+    depends_on('lapack', when='+blas')
+
+    conflicts('+blas', when='+mkl')
 
     # Run-time dependencies:
     # depends_on('arpack')
@@ -181,6 +186,11 @@ class Julia(Package):
         if '+mkl' in spec:
             options += [
                 'USE_INTEL_MKL=1',
+            ]
+        if '+blas' in spec:
+            options += [
+                'USE_SYSTEM_BLAS=1',
+                'USE_SYSTEM_LAPACK=1',
             ]
         with open('Make.user', 'w') as f:
             f.write('\n'.join(options) + '\n')
