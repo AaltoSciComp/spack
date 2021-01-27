@@ -144,9 +144,6 @@ class Julia(Package):
         # 'USE_SYSTEM_MPFR=1',
         # 'USE_SYSTEM_PCRE=1',
         options = [
-            'CC={0}'.format(self.compiler.cc),
-            'CXX={0}'.format(self.compiler.cxx),
-            'FC={0}'.format(self.compiler.fc),
             'prefix={0}'.format(prefix)
         ]
         if '@:0.5.0' in spec:
@@ -198,7 +195,10 @@ class Julia(Package):
         with open('Make.user', 'w') as f:
             f.write('\n'.join(options) + '\n')
 
-        make()
+        make(
+            'CC={0}'.format(self.compiler.cc),
+            'CXX={0}'.format(self.compiler.cxx),
+            'FC={0}'.format(self.compiler.fc))
         make('install')
 
         # Julia's package manager needs a certificate
